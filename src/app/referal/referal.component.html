@@ -1,0 +1,23 @@
+<div class="referal-container">
+    <mat-form-field>
+      <input matInput placeholder="NAMA CALON NASABAH">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="NO KTP">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="TANGGAL LAHIR">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+       <input matInput placeholder="NO HANDPHONE">
+    </mat-form-field>
+    <mat-form-field>
+       <textarea matInput placeholder="ALAMAT"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+       <input matInput placeholder="KODE POS">
+    </mat-form-field>
+    <button mat-raised-button color="primary">PROSES BERIKUTNYA<i class="material-icons md-36">keyboard_arrow_right</i></button>
+</div>

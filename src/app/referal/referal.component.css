@@ -1,0 +1,12 @@
+.referal-container {
+    display: flex;
+    flex-direction: column;
+ }
+  
+ .referal-container > * {
+    width: 100%;
+ }
+
+ .referal-container button{
+     height: 64px !important;
+ }

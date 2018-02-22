@@ -1,0 +1,44 @@
+.simulate-container {
+    display: flex;
+    flex-direction: column;
+ }
+  
+ .simulate-container > * {
+    width: 100%;
+ }
+
+ .simulate-container button{
+     height: 64px !important;
+ }
+
+ .calculate-title{
+    font-size: 36px;
+    margin: 5px 5px 0px 5px;
+}
+
+ .calculate-number{
+     font-size: 36px;
+     margin: 5px 10px 5px 5px;
+     background-color: chocolate;
+ }
+
+ .calculate-max{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+ .vehicle-type{
+     width: 110px !important;
+ }
+
+ .payment-type{
+    width: 160px !important;
+}
+
+.tenor-type{
+    width: 255px !important;
+}
+
+.action-control button{
+    
+}

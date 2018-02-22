@@ -1,0 +1,71 @@
+<div class="simulate-container">
+    <div class="calculate-title">Angsuran Perbulan</div>
+    <div class="calculate-number">Rp. 0</div>
+    <mat-form-field>
+      <input matInput placeholder="NAMA CALON NASABAH">
+    </mat-form-field>
+    <label>JENIS KENDARAAN</label>
+    <br/>
+    <mat-button-toggle-group #group="matButtonToggleGroup" class="vehicle-type">
+        <mat-button-toggle value="left">
+          <mat-icon>directions_car</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="center">
+          <mat-icon>directions_bike</mat-icon>
+        </mat-button-toggle>
+    </mat-button-toggle-group>
+    <br/>
+    <mat-form-field>
+        <input matInput placeholder="WILAYAH / AREA">
+    </mat-form-field>
+    <mat-form-field>
+       <input matInput placeholder="PERKIRAAN HARGA UNIT">
+    </mat-form-field>
+    <mat-form-field>
+       <input matInput placeholder="PENGAJUAN PINJAMAN">
+    </mat-form-field>
+    <div class="calculate-max">Maksimal pembiayaan Rp. 0</div>
+    <mat-form-field>
+      <mat-select placeholder="JENIS ASURANSI">
+        <mat-option *ngFor="let insurance of insurances" [value]="insurance.value">
+           {{ insurance.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <label>JENIS ANGSURAN</label>
+    <br/>
+    <mat-button-toggle-group #group="matButtonToggleGroup" class="payment-type">
+        <mat-button-toggle value="left">
+          ADDM
+        </mat-button-toggle>
+        <mat-button-toggle value="center">
+          ADDB
+        </mat-button-toggle>
+    </mat-button-toggle-group>
+    <br/>
+    <label>JANGKA WAKTU (BULAN)</label>
+    <br/>
+    <mat-button-toggle-group #group="matButtonToggleGroup" class="tenor-type">
+        <mat-button-toggle value="12">
+          12
+        </mat-button-toggle>
+        <mat-button-toggle value="24">
+          24
+        </mat-button-toggle>
+        <mat-button-toggle value="24">
+          36
+        </mat-button-toggle>
+        <mat-button-toggle value="24">
+          48
+        </mat-button-toggle>
+        <mat-button-toggle value="24">
+          60
+        </mat-button-toggle>
+    </mat-button-toggle-group>
+    <br/>
+    <br/>
+    <div class="action-control" fxLayout="row" fxLayoutAlign="space-around center">
+        <button mat-raised-button color="primary" fxFlex="45%">RESET &nbsp; <i class="material-icons md-36">autorenew</i></button>
+        <button mat-raised-button color="primary" fxFlex="45%">HITUNG &nbsp; <i class="material-icons md-36">queue_play_next</i></button>
+    </div>
+</div>

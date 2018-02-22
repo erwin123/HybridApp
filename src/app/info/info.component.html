@@ -1,0 +1,78 @@
+<mat-tab-group>
+    <mat-tab label="Control">
+        <mat-card>
+            <mat-card-content>
+              <h2 class="example-h2">Checkbox & Radio</h2>
+          
+              <section class="example-section">
+                <mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
+                <mat-checkbox class="example-margin" [(ngModel)]="indeterminate">Indeterminate</mat-checkbox>
+              </section>
+          
+              <section class="example-section">
+                <label class="example-margin">Align:</label>
+                <mat-radio-group [(ngModel)]="align">
+                  <mat-radio-button class="example-margin" value="start">Start</mat-radio-button>
+                  <mat-radio-button class="example-margin" value="end">End</mat-radio-button>
+                </mat-radio-group>
+              </section>
+              
+            </mat-card-content>
+         
+            <mat-card-content>
+                  <h2 class="example-h2">Select Options, Slider. & Slide Toggle</h2>
+                  <mat-form-field>
+                      <mat-select placeholder="State">
+                        <mat-option>None</mat-option>
+                        <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+                      </mat-select>
+                  </mat-form-field><br/>
+                  <mat-slider></mat-slider><br/>
+                  <mat-slide-toggle>Slide me!</mat-slide-toggle>
+            </mat-card-content>
+
+            <mat-card-content>
+                <h2 class="example-h2">Button & Chips</h2>
+                <mat-button-toggle-group #group="matButtonToggleGroup">
+                  <mat-button-toggle value="left">
+                    <mat-icon>format_align_left</mat-icon>
+                  </mat-button-toggle>
+                  <mat-button-toggle value="center">
+                    <mat-icon>format_align_center</mat-icon>
+                  </mat-button-toggle>
+                  <mat-button-toggle value="right">
+                    <mat-icon>format_align_right</mat-icon>
+                  </mat-button-toggle>
+                  <mat-button-toggle value="justify" disabled>
+                    <mat-icon>format_align_justify</mat-icon>
+                  </mat-button-toggle>
+                </mat-button-toggle-group><br/><br/><br/>
+                <mat-chip-list>
+                    <mat-chip>One fish</mat-chip>
+                    <mat-chip>Two fish</mat-chip>
+                    <mat-chip color="primary" selected="true">Primary fish</mat-chip>
+                    <mat-chip color="accent" selected="true">Accent fish</mat-chip>
+                  </mat-chip-list>
+            </mat-card-content>
+
+          </mat-card>        
+    </mat-tab>
+    <mat-tab label="Event">
+        <mat-card>
+            <mat-card-content>
+              <h2 class="example-h2">Snackbar & Tooltip</h2>
+              <mat-form-field>
+                  <input matInput value="Disco party!" placeholder="Message" #message>
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput value="Dance" placeholder="Action" #action>
+                </mat-form-field>
+                <button mat-raised-button color="accent" (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+                <br/>
+                <button mat-raised-button color="warn" matTooltip="Tooltip!">I have a tooltip</button>
+            </mat-card-content>
+
+        </mat-card>
+    </mat-tab>
+  </mat-tab-group>
+

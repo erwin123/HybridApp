@@ -1,0 +1,73 @@
+.container{
+    width: 100%;
+    background-color: #fff;
+}
+
+.login-banner{
+    background-color: #003665;
+}
+
+.login-banner img{
+    margin-top: 50px;
+}
+
+.login-banner2{
+    height: 100%;
+    padding-left: 25px;
+}
+
+.login-banner2 img{
+    margin-bottom: 20px;
+}
+
+.login-apps-logo
+{
+    text-align: center;
+}
+
+.login-apps-logo img{
+    margin-bottom: 10px;
+}
+
+.login-card {
+    min-width: 200px;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 0px 15px 0px 15px;
+    height: 100%;
+	background: #ffffff;
+}
+
+.login-card-title{
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 1.2;
+    color: #383838;
+    text-transform: inherit;
+    letter-spacing: inherit;
+}
+
+.login-form-input{
+    display: block;
+}
+
+.login-form button{
+    width: 100%;
+    border-radius:14px;
+}
+
+.alert-square
+{
+    color: #970000;
+    text-align: center;
+}
+
+.login-footer{
+    text-align: center;
+    font-size: 12px;
+    bottom:0;
+    left:0;
+    position:fixed;
+    top:auto;
+    width:100%;
+}

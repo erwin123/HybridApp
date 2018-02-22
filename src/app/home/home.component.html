@@ -1,0 +1,43 @@
+<div class="mat-app-background basic-container">
+  <div class="home-container" [class.home-is-mobile]="mobileQuery.matches">
+    <mat-toolbar color="primary" class="home-toolbar">
+      <button mat-icon-button (click)="snav.toggle()" >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h1 class="home-app-name">{{currentPage}}</h1>
+      <button mat-button *ngIf="!mobileQuery.matches" class="btn-referal" (click)="goReferal()">
+        <img src="assets/img/mandiriutama finance.jpg" alt=""/>
+        MULAI REFERENSIKAN<i class="material-icons md-36">keyboard_arrow_right</i>
+      </button>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="home-sidenav-container"  [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+        <mat-nav-list>
+          <div class="user-profile" fxLayout="row" fxLayoutAlign=" center">
+              <div class="user-profile-photo" fxFlex="25%">
+              </div>
+              <div class="user-profile-name" fxFlex="50%" fxLayoutAlign=" center">
+                ERWIN ANTONIUS
+              </div>
+          </div>
+          <a mat-list-item routerLink="/landing" (click)="menuClick('Beranda')"><mat-icon>home</mat-icon><span class="list-menu">Beranda</span></a>
+          <a mat-list-item routerLink='/term' (click)="menuClick('Syarat Ketentuan')"><mat-icon>info_outline</mat-icon><span class="list-menu">Syarat Ketentuan</span></a>
+          <a mat-list-item routerLink="/simulate" (click)="menuClick('Syarat Ketentuan')"><mat-icon>account_balance_wallet</mat-icon><span class="list-menu">Simulasi Pembiayaan Multiguna</span></a>
+          <a mat-list-item routerLink="/order" (click)="menuClick('Simulasi Pembiayaan Multiguna')"><mat-icon>assignment</mat-icon><span class="list-menu">Telusuri Pesanan</span></a>
+          <a mat-list-item routerLink="/setting" (click)="menuClick('Pengaturan')"><mat-icon>face</mat-icon><span class="list-menu">Pengaturan</span></a>
+          <a mat-list-item routerLink="/about" (click)="menuClick('Tentang MUF')"><mat-icon>help</mat-icon><span class="list-menu">Tentang MUF (Table)</span></a>
+          <a mat-list-item routerLink="/info" (click)="menuClick('Info MUF')"><mat-icon>information</mat-icon><span class="list-menu">Informasi</span></a>
+          <a mat-list-item routerLink="/share" (click)="menuClick('Tell a Friend')"><mat-icon>share</mat-icon><span class="list-menu">Tell a Friend</span></a>
+          <a mat-list-item (click)="logout()" ><mat-icon>exit_to_app</mat-icon><span class="list-menu">Keluar</span></a>
+        </mat-nav-list>
+      </mat-sidenav>
+
+      <mat-sidenav-content>
+        <div class="container-inside">
+          <router-outlet></router-outlet>
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+</div>

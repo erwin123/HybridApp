@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="login-banner">
+        <img src="assets/img/mandiri-logo.png" alt=""/>
+    </div>
+    <div class="login-banner2">
+        <img src="assets/img/muflogo.jpg" alt=""/>
+    </div>
+    <div class="login-apps-logo">
+        <img src="assets/img/mufon_v2.png" alt=""/>
+    </div>
+    <div class="login-card">
+        <form class="login-form" (ngSubmit)="login()">
+            <mat-form-field class="login-form-input">
+                <input type="text" matInput placeholder="ALAMAT EMAIL" [(ngModel)]="account.username" name="username" required>
+            </mat-form-field>
+            <mat-form-field  class="login-form-input">
+                <input type="password" matInput placeholder="KATA SANDI" [(ngModel)]="account.password" name="password" required>
+            </mat-form-field>
+            <button mat-raised-button color="primary">MASUK</button>
+            <button mat-button>Lupa password</button>
+            <button mat-button>Daftar baru</button>
+        </form>
+        <div class="alert-square" *ngIf="message">
+            {{message}}
+        </div>
+    </div>
+    <div class="login-footer">
+        <div class="login-footer-content">
+                PT. Mandiri Utama Finance / 2018
+        </div>
+    </div>
+</div>
