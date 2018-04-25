@@ -6,7 +6,7 @@
         <input matInput placeholder="NO KTP">
     </mat-form-field>
     <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="TANGGAL LAHIR">
+        <input matInput [matDatepicker]="picker" placeholder="TANGGAL LAHIR" [formControl]="dateMy" (dateChange)="changeValue()">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
